@@ -1,0 +1,40 @@
+/**app.wxss**/
+page {
+  height: 100%;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0; */
+  box-sizing: border-box;
+} 
+
+@font-face {
+  font-family: 'iconfont';  /* project id 664690 */
+  src: url('//at.alicdn.com/t/font_664690_y9k4f49v2wmqjjor.eot');
+  src: url('//at.alicdn.com/t/font_664690_y9k4f49v2wmqjjor.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_664690_y9k4f49v2wmqjjor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_664690_y9k4f49v2wmqjjor.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_664690_y9k4f49v2wmqjjor.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tuijian:before { content: "\e608"; }
+
+.icon-tuijian1:before { content: "\e60e"; }
+
+.icon-jiantouyou:before { content: "\e62d"; }
+
+.icon-search:before { content: "\e63a"; }
+
+.icon-wode:before { content: "\e60d"; }

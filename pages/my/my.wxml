@@ -1,0 +1,5 @@
+<view class="container">
+	<text>join us!</text>
+	<image src="../../images/my.jpg"/>
+	<text>欢迎加我微信，一起探讨更多前端技术</text>
+</view>

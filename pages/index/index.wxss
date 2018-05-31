@@ -1,0 +1,28 @@
+
+swiper {
+	height: 400rpx;
+}
+.index-list{
+	display: flex;
+	flex-direction: column;
+	margin-top:28rpx;
+}
+.list-item{
+	display: flex;
+	flex: 1;
+	margin: 0 40rpx;
+	/*padding: 30rpx 0;*/
+	line-height: 3rem;
+	cursor: pointer;
+}
+navigator ~ navigator .list-item {
+	border-top: 1px solid #aaa;
+}
+.list-item text {
+	flex: 1;
+}
+.list-item image{
+	width: 50rpx;
+	height: 50rpx;
+	color: #000;
+} 

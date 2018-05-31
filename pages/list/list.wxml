@@ -1,0 +1,24 @@
+<wxs module="fmData" src="../../filter/fmData.wxs"></wxs>
+<view class="container">
+	<loading hidden="{{!loading}}" >加载中...</loading>
+	<view class="list-title">
+		<text>{{currentTitle}}</text>
+	</view>
+	<scroll-view class="list-content">
+		<navigator wx:for="{{list}}" url="../detail/detail?title={{item.title}}&id={{item.id}}" hover-class="none" style="cursor:pointer">
+			<view class="list-item">
+				<image src="{{item.images.large}}" mode="aspectFill"/>
+				<view class="list-text">
+					<view class="item-title">
+						<text style="">{{item.title}}</text>
+						<text class="item-comment">{{item.rating.average}}</text>
+					</view>
+					<view>类型：{{item.genres}}</view>
+					<view>上映时间：{{item.year}}</view>
+					<view>演员：{{fmData.fmActor(item.casts)}}</view>
+				</view>
+			</view>
+		</navigator>
+		<view class="warning-text" wx:if="{{warnFlag}}">此功能暂未开放，敬请期待！</view>
+	</scroll-view>
+</view>

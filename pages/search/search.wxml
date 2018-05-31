@@ -1,0 +1,29 @@
+<!--logs.wxml-->
+<wxs module="fmData" src="../../filter/fmData.wxs"></wxs>
+<view class="container">
+  <view class="search">
+  	<icon class="search-icon" type="search" size="23" ></icon>
+  	<input type="text" placeholder="请输入要搜索的内容" placeholder-class="search-placeholder" value="{{inputValue}}" bindinput="bindSearchInput" bindconfirm="search"/>
+  	<icon wx:if="{{showDelete}}" class="search-delete" type="cancel" size="23" color="#000" bindtap="bindSearchDelete"></icon>
+  </view>
+  <view class="warn-info" wx:if="{{warnFlag}}">
+  	抱歉，最近没有关于{{inputValue}}的电影！
+  	<!-- <view>抱歉，最近没有关于{{inputValue}}的电影！</view> -->
+  </view>
+  <view class="search-result" wx:if="{{!warnFlag}}">
+  	<navigator wx:for="{{searchList}}" url="../detail/detail?title={{item.title}}&id={{item.id}}"  hover-class="none" style="cursor:pointer;">
+	  	<view class="search-item">
+	  		<image src="{{item.images.large}}"/>
+		  	<view class="item-text">
+		  		<view class="item-title">
+		  			<text>{{item.title}}</text>
+		  			<text>{{item.rating.average}}</text>
+		  		</view>
+		  		<text>年份：{{item.year}}</text>
+		  		<text>导演：{{item.directors[0].name}}</text>
+		  		<text>主演：{{fmData.fmActor(item.casts)}}</text>
+		  	</view>
+	  	</view>
+  	</navigator>
+  </view>
+</view>

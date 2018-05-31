@@ -1,0 +1,14 @@
+image {
+	margin:10rpx auto;
+	border-radius: 50%;
+}
+text:first-child {
+	margin: 10rpx 0;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+}
+text:last-child {
+	margin: 10rpx 0;
+	text-align: center;
+}

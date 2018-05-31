@@ -1,0 +1,18 @@
+<view class="container">
+	<loading hidden="{{!loading}}" >加载中...</loading>
+	<image src="{{imgUrl}}" mode="aspectFill"/>
+		<text class="film-title">{{title}}</text>
+		<text class="film-commit">评分：{{commit}} 分</text>
+		<text class="film-director">导演：{{directors}}</text>
+		<view class="film-actor" >
+			<text>主演：</text>
+			<view class="actor-img" wx:for="{{actorList}}">
+				<image src="{{item.avatars.large}}" mode="aspectFill"/>
+				<text>{{item.name}}</text>
+			</view>
+		</view>
+		<view class="film-description">
+			<text>介绍：</text>
+			<text>{{summary}}</text>
+		</view>
+</view>

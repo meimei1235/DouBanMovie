@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my/my",
+    "pages/search/search",
+    "pages/list/list",
+    "pages/detail/detail"
+  ],
+  "window":{
+     "backgroundTextStyle":"light",
+      "navigationBarBackgroundColor": "#000",
+      "navigationBarTitleText": "WeChat",
+      "navigationBarTextStyle": "white",
+      "backgroundColor": "#f0145a"
+  },
+  "tabBar":{
+    "color": "#fff",
+    "selectedColor": "#f4ea2a",
+    "backgroundColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tuijian.png",
+        "selectedIconPath": "images/tuijian1.png"
+      },{
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/sousuo.png",
+        "selectedIconPath": "images/sousuo1.png"
+      },{
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my1.png"
+      }
+    ]
+  },
+  "debug": true,
+  "enablePullDownRefresh": true
+}
